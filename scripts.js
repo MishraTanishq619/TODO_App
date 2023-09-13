@@ -6,8 +6,8 @@ var arr = [];
 
 function listing() {
 	let x = "";
-	for (const i of arr) {
-		x += `<li>${i}</li>`;
+	for (const i in arr) {
+		x += `<li key="${i}">${arr[i]}</li>`;
 	}
 	list.innerHTML = x;
 }
@@ -36,7 +36,14 @@ document.querySelector("ol").addEventListener("click", (dets) => {
 	// dets.target.outerHTML = "";
 	// console.log(dets);
 	// console.log(x);
+	// console.log(dets.target.outerHTML);
 
-	arr.pop(dets.target.outerHTML);
+	console.log(dets.target.innerHTML);
+
+	// arr.pop(dets.target.innerHTML);
+	let i = arr.indexOf(dets.target.innerHTML);
+
+	arr.splice(i, 1);
+
 	listing();
 });

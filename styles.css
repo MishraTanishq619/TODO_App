@@ -102,3 +102,37 @@ li:hover {
 	height: 40px;
 	border: 2px solid black;
 }
+
+/* responsive */
+
+@media (max-width: 600px) {
+	#input {
+		width: 80%;
+	}
+
+	#input input {
+		height: 100%;
+		width: 90%;
+	}
+
+	#input button {
+		width: 20%;
+		font-size: small;
+	}
+
+	#list {
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: 7%;
+		font-size: x-large;
+		padding: 5% 5% 10% 10%;
+	}
+
+	#list p {
+		margin-top: -10px;
+	}
+
+	#line {
+		padding-top: 6px;
+	}
+}
